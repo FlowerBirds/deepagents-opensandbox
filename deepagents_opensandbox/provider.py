@@ -11,7 +11,6 @@ from datetime import timedelta
 from typing import Any
 
 from deepagents.backends.protocol import SandboxBackendProtocol
-from deepagents_cli.integrations.sandbox_provider import SandboxProvider
 from opensandbox.config.connection import ConnectionConfig
 from opensandbox.config.connection_sync import ConnectionConfigSync
 from opensandbox.sandbox import Sandbox
@@ -22,7 +21,7 @@ from deepagents_opensandbox.backend import OpensandboxBackend
 logger = logging.getLogger(__name__)
 
 
-class OpensandboxProvider(SandboxProvider):
+class OpensandboxProvider:
     """Opensandbox provider for managing sandbox lifecycle.
 
     This provider creates, connects to, and deletes OpenSandbox containers.
